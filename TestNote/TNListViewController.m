@@ -120,6 +120,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.noteList objectAtIndex:indexPath.row];
+    [self.noteList removeObjectAtIndex:indexPath.row];
     
     if(editingStyle==UITableViewCellEditingStyleDelete)
     {
