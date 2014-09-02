@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB28FF2D19ABF7310031BA34 /* TNCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB28FF2C19ABF7310031BA34 /* TNCreateViewController.m */; };
+		EB31C1561977023B00ABC0C6 /* TNNote.m in Sources */ = {isa = PBXBuildFile; fileRef = EB31C1551977023B00ABC0C6 /* TNNote.m */; };
 		EB5C2FD31974BA27006DBE20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5C2FD21974BA27006DBE20 /* Foundation.framework */; };
 		EB5C2FD51974BA27006DBE20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5C2FD41974BA27006DBE20 /* CoreGraphics.framework */; };
 		EB5C2FD71974BA27006DBE20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5C2FD61974BA27006DBE20 /* UIKit.framework */; };
@@ -19,6 +21,8 @@
 		EB5C2FEE1974BA27006DBE20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5C2FD61974BA27006DBE20 /* UIKit.framework */; };
 		EB5C2FF61974BA27006DBE20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB5C2FF41974BA27006DBE20 /* InfoPlist.strings */; };
 		EB5C2FF81974BA27006DBE20 /* TestNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C2FF71974BA27006DBE20 /* TestNoteTests.m */; };
+		EB5C30021974BA7D006DBE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5C30011974BA7D006DBE20 /* Main.storyboard */; };
+		EB5C30051974BB48006DBE20 /* TNListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C30041974BB48006DBE20 /* TNListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB28FF2C19ABF7310031BA34 /* TNCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCreateViewController.m; sourceTree = "<group>"; };
+		EB31C1541977023B00ABC0C6 /* TNNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNNote.h; sourceTree = "<group>"; };
+		EB31C1551977023B00ABC0C6 /* TNNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNNote.m; sourceTree = "<group>"; };
 		EB5C2FCF1974BA27006DBE20 /* TestNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5C2FD21974BA27006DBE20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB5C2FD41974BA27006DBE20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +55,10 @@
 		EB5C2FF31974BA27006DBE20 /* TestNoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestNoteTests-Info.plist"; sourceTree = "<group>"; };
 		EB5C2FF51974BA27006DBE20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB5C2FF71974BA27006DBE20 /* TestNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNoteTests.m; sourceTree = "<group>"; };
+		EB5C30011974BA7D006DBE20 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EB5C30031974BB48006DBE20 /* TNListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNListViewController.h; sourceTree = "<group>"; };
+		EB5C30041974BB48006DBE20 /* TNListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TNListViewController.m; sourceTree = "<group>"; };
+		EB5C30061974BC35006DBE20 /* TNCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCreateViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,13 @@
 		EB5C2FD81974BA27006DBE20 /* TestNote */ = {
 			isa = PBXGroup;
 			children = (
+				EB5C30061974BC35006DBE20 /* TNCreateViewController.h */,
+				EB28FF2C19ABF7310031BA34 /* TNCreateViewController.m */,
+				EB5C30031974BB48006DBE20 /* TNListViewController.h */,
+				EB5C30041974BB48006DBE20 /* TNListViewController.m */,
+				EB31C1541977023B00ABC0C6 /* TNNote.h */,
+				EB31C1551977023B00ABC0C6 /* TNNote.m */,
+				EB5C30011974BA7D006DBE20 /* Main.storyboard */,
 				EB5C2FE11974BA27006DBE20 /* TNAppDelegate.h */,
 				EB5C2FE21974BA27006DBE20 /* TNAppDelegate.m */,
 				EB5C2FE41974BA27006DBE20 /* Images.xcassets */,
@@ -222,6 +240,7 @@
 			files = (
 				EB5C2FDD1974BA27006DBE20 /* InfoPlist.strings in Resources */,
 				EB5C2FE51974BA27006DBE20 /* Images.xcassets in Resources */,
+				EB5C30021974BA7D006DBE20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB31C1561977023B00ABC0C6 /* TNNote.m in Sources */,
+				EB28FF2D19ABF7310031BA34 /* TNCreateViewController.m in Sources */,
 				EB5C2FE31974BA27006DBE20 /* TNAppDelegate.m in Sources */,
 				EB5C2FDF1974BA27006DBE20 /* main.m in Sources */,
+				EB5C30051974BB48006DBE20 /* TNListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +460,7 @@
 				EB5C2FFD1974BA27006DBE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB5C2FFE1974BA27006DBE20 /* Build configuration list for PBXNativeTarget "TestNoteTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +469,7 @@
 				EB5C30001974BA27006DBE20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
