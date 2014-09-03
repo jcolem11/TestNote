@@ -11,5 +11,7 @@
 @interface TNListViewController : UITableViewController
 
 -(IBAction)unwindToList:(UIStoryboardSegue*)segue;
+-(UIStatusBarStyle)preferredStatusBarStyle;
+
 
 @end

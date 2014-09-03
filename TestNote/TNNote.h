@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface TNNote : NSString <NSCoding>
+@interface TNNote : NSObject <NSCoding>
 
 @property (strong,nonatomic) NSString *noteText;
 @property (strong,nonatomic) NSDate *noteDate;

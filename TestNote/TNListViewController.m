@@ -11,6 +11,7 @@
 #import "TNCreateViewController.h"
 #import "TNNote.h"
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface TNListViewController ()
 
@@ -36,14 +37,33 @@
     self.noteList=[[NSMutableArray alloc] init];
     NSLog(@"%@ has been allocated",self.noteList);
     
+    NSData *dataToUnarchive=[[NSUserDefaults standardUserDefaults] objectForKey:@"notes"];
+    self.noteList=[NSKeyedUnarchiver unarchiveObjectWithData:dataToUnarchive];
+    NSLog(@"unarchived data%@",dataToUnarchive);
+    
     // UI stuff
     self.navigationController.navigationBar.tintColor=[UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:0.58 green:0.77 blue:0.49 alpha:1.0];
-        
-
+   
+    /*
+    UIButton *newNoteButton=[[UIButton alloc] initWithFrame:CGRectMake(135, 10, 50, 50)];
+    //newNoteButton.layer.cornerRadius=25;
+    [newNoteButton setTitle:@"+" forState:UIControlStateNormal];
+    newNoteButton.backgroundColor=[UIColor colorWithRed:0.58 green:0.77 blue:0.49 alpha:1.0];;
+    //[newNoteButton addTarget:self action:@selector() forControlEvents:UIControlEventTouchUpInside];
+   
+    [self.tableView addSubview:newNoteButton];
+     */
+    
+    self.tableView.separatorStyle= UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor=[UIColor lightGrayColor];
+    self.tableView.backgroundColor=[UIColor whiteColor];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
+    
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -65,7 +85,6 @@
 -(IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
     //Get Note from source
-    
     TNCreateViewController *sourceController = [segue sourceViewController];    
     TNNote *note = sourceController.addNote;
     
@@ -74,10 +93,9 @@
         [self.noteList addObject:note];
         [self.tableView reloadData];
         self.clearsSelectionOnViewWillAppear=YES;
-       //  NSData *listData=[NSKeyedArchiver archivedDataWithRootObject:self.noteList];
-       // [[NSUserDefaults standardUserDefaults]  setObject:listData forKey:@"notes"];
-      
-
+       NSData *listData=[NSKeyedArchiver archivedDataWithRootObject:self.noteList];
+       [[NSUserDefaults standardUserDefaults]  setObject:listData forKey:@"notes"];
+        NSLog(@"Current List Data %@",listData);
     }    
     
 }
@@ -119,7 +137,8 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.noteList objectAtIndex:indexPath.row];
+    
+    //Must delete note from array first!
     [self.noteList removeObjectAtIndex:indexPath.row];
     
     if(editingStyle==UITableViewCellEditingStyleDelete)
@@ -132,10 +151,14 @@
 }
 
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
 
-/*
+
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
